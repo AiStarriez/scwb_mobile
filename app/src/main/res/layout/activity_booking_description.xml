@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BookingDescription">
+    tools:context=".BookingDescription"
+    android:id="@+id/bookingDescriptionLayout">
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/background_recent"
         android:layout_width="335dp"
@@ -128,19 +129,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/qrCode_description" />
 
-    <Button
-        android:id="@+id/mapViewButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:text="@string/mapView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/qrCodeScanButton" />
 
     <Button
         android:id="@+id/cancelBookingButton"
@@ -153,7 +141,21 @@
         android:layout_marginRight="16dp"
         android:text="@string/cancelBooking"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mapViewButton" />
+        app:layout_constraintTop_toBottomOf="@+id/qrCodeScanButton" />
+
+    <TextView
+        android:id="@+id/countDownTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/cancelBookingButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/background_recent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
@@ -58,6 +59,11 @@ class DashBoard : AppCompatActivity() {
 
         }.addOnFailureListener { task->
             Log.d("testTask", task.message)
+        }
+        val viewCurrentBookingBtn: Button = findViewById(R.id.viewCurrentBookingBtn)
+        viewCurrentBookingBtn.setOnClickListener {
+            val myIntent = Intent(baseContext, BookingDescription::class.java)
+            startActivity(myIntent)
         }
         
     }

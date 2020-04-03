@@ -27,8 +27,6 @@ class ShowTimeAdapter(private val context: Context
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        @RequiresApi(Build.VERSION_CODES.O)
-        val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss.SSS")
         fun bind(showTime: ShowTime) {
             itemView.apply {
                 try{
