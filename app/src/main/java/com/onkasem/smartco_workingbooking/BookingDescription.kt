@@ -73,7 +73,6 @@ class BookingDescription : AppCompatActivity() {
         qrCodeScanButton.setOnClickListener {
             qrCodeDescription.setVisibility(View.INVISIBLE)
             qrCodeScanButton.setVisibility(View.INVISIBLE)
-            mapViewButton.setVisibility(View.INVISIBLE)
             countDownTime.setVisibility(View.VISIBLE)
 
             setTime(amountHours * 3600000);
@@ -172,7 +171,7 @@ class BookingDescription : AppCompatActivity() {
                     bookingPlace.text = place
                     bookingDate.text = "$date $time"
                     personInReserve.text = "${peopleCount} people"
-                    tableNo.text = "${tableOrder.toString()}"
+                    tableNo.text = "Table ${tableOrder.toString()}"
                 }
             }
             .addOnFailureListener { exception ->

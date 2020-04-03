@@ -6,9 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".BookingDescription"
     android:id="@+id/bookingDescriptionLayout">
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/background_recent"
-        android:layout_width="335dp"
+        android:layout_width="0dp"
         android:layout_height="148dp"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
@@ -34,59 +35,56 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="40dp" />
-
     <TextView
         android:id="@+id/bookingPlace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="40dp"
         android:text="@string/coe_coworking"
         android:textColor="@color/textColor"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/background_recent"
         app:layout_constraintTop_toBottomOf="@+id/bookingDescription" />
 
     <TextView
         android:id="@+id/showBookingDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="8dp"
         android:text="@string/date"
         android:textColor="@color/textColor"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/background_recent"
         app:layout_constraintTop_toBottomOf="@+id/bookingPlace" />
 
     <TextView
         android:id="@+id/tableNo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="8dp"
         android:text="@string/tableNo10"
         android:textColor="@color/textColor"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/background_recent"
         app:layout_constraintTop_toBottomOf="@+id/showBookingDate" />
 
     <TextView
         android:id="@+id/personInReserve"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="8dp"
         android:text="@string/four_people"
         android:textColor="@color/textColor"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/background_recent"
         app:layout_constraintTop_toBottomOf="@+id/tableNo" />
 
     <androidx.constraintlayout.widget.Guideline
@@ -132,6 +130,7 @@
 
     <Button
         android:id="@+id/cancelBookingButton"
+        style="@style/cancelBth"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -151,7 +150,7 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         android:textAlignment="center"
-        android:textSize="18sp"
+        android:textSize="25sp"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/cancelBookingButton"
         app:layout_constraintEnd_toEndOf="parent"
